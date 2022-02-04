@@ -1,0 +1,15 @@
+<tr>
+  <td>{{items.name}}</td>
+  <td>{{items.size}}</td>
+  <td>{{items.path}}</td>
+  <td>{{items.type}}</td>
+  <td>{{items.mtime}}</td>
+</tr>
+<tr *ngFor="let item of items.children" >
+
+  <td>{{item.name}}</td>
+  <td>{{item.size}}</td>
+  <td>{{item.path}}</td>
+  <td>{{item.type}}</td>
+  <td>{{item.mtime}}</td>
+</tr>

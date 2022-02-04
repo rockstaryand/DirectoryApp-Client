@@ -1,0 +1,36 @@
+<div>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Path</th>
+      <th>Type</th>
+      <th>Date Created</th>
+    </tr>
+    <tr>
+      <td>-{{items.name}}</td>
+      <td>{{items.size}}</td>
+      <td>{{items.path}}</td>
+      <td>{{items.type}}</td>
+      <td>{{items.mtime}}</td>
+    </tr>
+    <tr  *ngFor="let item of items.children" >
+
+      <td *ngIf="item.type=='directory'"><a (click)="getDirectory(item.path)">{{item.name}}</a></td>
+      <td *ngIf="item.type=='directory'">{{item.size}}</td>
+      <td *ngIf="item.type=='directory'">{{item.path}}</td>
+      <td *ngIf="item.type=='directory'">{{item.type}}</td>
+      <td *ngIf="item.type=='directory'">{{item.mtime}}</td>
+      <td *ngIf="item.type=='file'">{{item.name}}</td>
+      <td *ngIf="item.type=='file'">{{item.size}}</td>
+      <td *ngIf="item.type=='file'">{{item.path}}</td>
+      <td *ngIf="item.type=='file'">{{item.type}}</td>
+      <td *ngIf="item.type=='file'">{{item.mtime}}</td>
+    </tr>
+
+
+
+  </table>
+
+</div>
+
